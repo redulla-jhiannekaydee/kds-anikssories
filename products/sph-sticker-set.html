@@ -65,6 +65,49 @@
                 </tr>
                 </tbody>
             </table>
+
+            <form id="orderEnquiry">
+                <p>
+                    <label for="quantity">Quantity:</label><br>
+                    <input type="number" id="quantity" name="quantity" min="1" max="20" required><br>
+                </p>
+
+                <fieldset>
+                    <legend>Delivery Method</legend>
+                    <p>
+                        <input type="radio" id="deliveryMode1" name="delivery" value="deliver">
+                        <label for="deliveryMode1">Deliver to me</label>
+                    </p>
+
+                    <p>
+                        <input type="radio" id="deliveryMode2" name="delivery" value="pickup">
+                        <label for="deliveryMode2">I'll pick it up</label>
+                    </p>
+                </fieldset>
+                
+                <p>Optional Add-ons</p>
+                <p>
+                    <input type="checkbox" id="optionalAddon1" name="optional" value="gift-box">
+                    <label for="optionalAddon1">Gift Box Upgrade</label><br>
+                </p>
+
+                <p>
+                    <input type="checkbox" id="optionalAddon2" name="optional" value="gift-pouch">
+                    <label for="optionalAddon2">Gift-Ready Envelope/Pouch</label><br>
+                </p>
+
+                <p>
+                    <input type="checkbox" id="optionalAddon3" name="optional" value="express">
+                    <label for="optionalAddon3">Express Handling</label><br>
+                </p>
+
+                <p>
+                    <label for="emailAdd">Enter your Email Address:</label><br>
+                    <input type="email" id="emailAdd" name="emailAdd" placeholder="juan.delacruz@example.com" required><br>
+                </p>
+
+                <button type="submit">Submit Order</button>
+            </form>
         </main>
     </body>
 </html>
