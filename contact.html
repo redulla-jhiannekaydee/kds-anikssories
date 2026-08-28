@@ -31,17 +31,39 @@
         </ul>
 
         <h2>You may send a direct message here:</h2>
-        <form>
-            <label for="name">Name:</label><br>
-            <input type="text" id="name" name="name" placeholder="Dela Cruz, Juan A." required><br><br>
+        <form id="contactForm">
+            <fieldset>
+                <legend>Your details</legend>
+                    <p>
+                        <label for="name">Name:</label><br>
+                        <input type="text" id="name" name="name" placeholder="Dela Cruz, Juan A." required><br><br>
+                    </p>
 
-            <label for="emailAdd">Email Address:</label><br>
-            <input type="email" id="emailAdd" name="emailAdd" placeholder="juan.delacruz@example.com" required><br><br>
+                    <p>
+                        <label for="emailAdd">Email Address:</label><br>
+                        <input type="email" id="emailAdd" name="emailAdd" placeholder="juan.delacruz@example.com" required><br><br>
+                    </p>
+            </fieldset>
 
-            <label for="message">Message:</label><br>
-            <textarea id="message" name="message" rows="5" placeholder="How can we help you?" required></textarea><br><br>
-            
-            <button type="submit">Submit</button>
+            <fieldset>
+                <legend>Nature of Inquiry</legend>
+                    <p>
+                        <label for="subject">Subject:</label><br>
+                        <select id="subject" name="subject">
+                            <option value="">-- Select --</option>
+                            <option value="product-question">Product Question</option>
+                            <option value="order-status">Order Status</option>
+                            <option value="wholesale-inquiry">Wholesale Inquiry</option>
+                            <option value="other-inquiry">Other Inquiry</option>
+                        </select>
+                    </p>
+            </fieldset>
+
+            <p>
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="5" placeholder="How can we help you?" required></textarea><br><br>
+            </p>
+            <button type="submit">Send message</button>
         </form>
     </main>
 
