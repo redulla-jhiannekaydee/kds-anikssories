@@ -95,6 +95,7 @@ main {
     max-width: 1100px;
     margin: 0 auto;
     padding: 2rem 1rem;
+    display: block;
 }
 
 main h2 {
@@ -118,20 +119,16 @@ footer p {
 }
 
 /* components */
-main {
-    display: block;
-}
-
-article h1 {
+main article h1 {
     color: var(--ink);
 }
 
-article h3 {
+main article h3 {
     color: var(--ink);
     margin-top: 0;
 }
 
-article p i {
+main article p i {
     color: var(--textColor3);
 }
 
