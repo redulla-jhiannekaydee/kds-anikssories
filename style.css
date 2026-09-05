@@ -1,0 +1,194 @@
+/* fonts to be used from gfonts */
+@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:ital,wght@0,100..900;1,100..900&family=Geist+Pixel&family=Geist:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* variables - a brand color, an ink color, a muted color, and a light background */
+:root {
+    --brand: #F39EB6;
+    --ink: #865271;
+    --muted: #8A7680;
+    --paper: #FAE5EF;
+    --textColor1: #FFFDCE;
+    --textColor2: #E6E2C6; 
+    --textColor3: #675961;
+    --shadeOfColor: #8967B3; 
+    --backgroundProduct: #FFF1AC;
+    --borderProduct: #D4C25C;
+    --borderShadow: #A8A492;
+}
+
+/* base styles - using the universal selector and the body element */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Geist Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.5;
+    color: var(--ink);
+    background: var(--paper);
+}
+
+/* layoutting - from header to footer parts 
+1. adjusting the header */
+header {
+    background: var(--brand);
+    color: var(--textColor1);
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0 0 0.25rem;
+    font-family: "Geist Pixel", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.6px;
+}
+
+header p {
+    margin: 0;
+    font-style: italic;
+    font-size: 15px;
+    opacity: 0.9;
+}
+
+/* 2. adjusting the navigation bar */
+nav {
+    background: var(--shadeOfColor);
+    font-family: "Geist", sans-serif;
+    font-weight: 200;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav a {
+    display: block;
+    padding: 0.9rem 1.4rem;
+    color: var(--textColor2);
+    text-decoration: none;
+    font-size: 13px;
+}
+
+nav a:hover {
+    background: var(--brand);
+}
+
+/* 3. designing the main/body part */
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+main h2 {
+    text-align: center;
+    color: var(--ink);
+    margin-bottom: 2rem;
+}
+
+/* 4. adjusting the footer */
+footer {
+    background: var(--shadeOfColor);
+    color: var(--textColor2);
+    text-align: center;
+    padding: 1.2rem;
+    font-size: 11px;
+}
+
+footer p {
+    margin: 0;
+    color: var(--textColor2);
+}
+
+/* components 
+product grid wrapper */
+main {
+    display: block;
+}
+
+main > article,
+    .product-grid article {
+        background: var(--backgroundProduct);
+        border: 1px solid var(--borderProduct);
+        border-radius: 15px;
+        padding: 1.2rem;
+        margin-bottom: 2rem;
+        box-shadow: 0 4px 10px var(--borderShadow);
+}
+
+article h3 {
+    color: var(--ink);
+    margin-top: 0;
+}
+
+article p i {
+    color: var(--textColor3);
+}
+
+/* grid layout for product cards */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.3rem;
+}
+
+.card {
+    background: var(--backgroundProduct);
+    border: var(--borderProduct);
+    border-radius: 15px;
+    padding: 1rem;
+    box-shadow: 0 4px 10px var(--borderShadow);
+    text-align: center;
+}
+
+.card h3 {
+    font-size: 17px;
+    margin: 0.8rem 0 0.3rem;
+}
+
+.button {
+    display: inline-block;
+    background: var(--brand);
+    color: var(--textColor1);
+    padding: 0.6rem 1.2rem;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.button:hover {
+    opacity: 0.9;
+}
+
+
+/* utilities */
+.text-center {
+    text-align: center;
+}
+
+/* contact form part */
+
+table {
+    border-collapse: collapse;
+    width: 50%;
+}
+
+th, td {
+    border: 1px solid #8a5f41;
+    padding: 3px;
+}

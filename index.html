@@ -3,13 +3,14 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
         <title>kd’s anikssories</title>
     </head>
 
     <body>
     <header>
         <h1>KD’s anikssories</h1>
-        <p><i>Happiness starts with anikssories.</i></p>
+        <p>Happiness starts with anikssories.</p>
     </header>
 
      <!-- navbar -->
@@ -24,8 +25,9 @@
     <!--products part-->
     <main>
     <h2>My Products</h2>
-
-        <article>
+    
+    <div class="product-grid">
+        <article class="card">
             <h3>Cat Wondering Button Pin Badge</h3>
             <p>Php 15</p>
             <p>This product features a cat wondering about something, with the background showing a vibrant, 
@@ -35,7 +37,7 @@
             <img src="anikpictures/products-anik/code1-button-pin.png" alt="cat wondering button pin badge" width="200px" height="200px">
         </article>
 
-        <article>
+        <article class="card">
             <h3>Orange Cat Button Pin Badge</h3>
             <p>Php 15</p>
             <p>The product showcases how cute orenj cats are (what we usually call orange cats here). 
@@ -45,7 +47,7 @@
             <img src="anikpictures/products-anik/code2-button-pin.png" alt="orange cat button pin badge" width="200px" height="200px">
         </article>
 
-        <article>
+        <article class="card">
             <h3>BTG (been that girl) Button Pin Badge</h3>
             <p>Php 15</p>
             <p><i>“I been that girl”</i><br>This product features a lyric I got from the song BTG from KiiiKiii. 
@@ -55,27 +57,20 @@
             <img src="anikpictures/products-anik/code3-button-pin.png" alt="been that girl button pin badge" width="200px" height="200px">
         </article>
 
-        <article>
+        <article class="card">
             <h3>SPH Sticker Set</h3>
             <p>Php 30</p>
             <p>This product is perfect for decorating your journals, diaries, planners, notebooks, laptop, and tumbler. 
                 Each design comes from the title of a K-pop song, making it perfect for someone who enjoys K-pop. <br>
-                Product Details:<br>
-                <ul>
-                    <li>3 pieces</li>
-                    <li>Stickers are cut per piece</li>
-                    <li>Matte finish</li>
-                    <li>Sizes are approximately 1 inch or 1.5 inches (depending on the design, so sizes may vary)</li>
-                </ul>
             </p>
             <img src="anikpictures/products-anik/code1-sticker-set.png" alt="sph sticker set" width="200px" height="200px">
             <br>
             <ul>
-                <li><a href="products/sph-sticker-set.html">View details</a></li>
+                <li><a href="products/sph-sticker-set.html" class="button">View details</a></li>
             </ul>
         </article>
 
-        <article>
+        <article class="card">
             <h3>Lotus Ribbon Phone Charm</h3>
             <p>Php 40</p>
             <p>This phone charm features a ribbon bead, a four-leaf clover bead, a red apple bead, round beads, 
@@ -86,7 +81,7 @@
             <img src="anikpictures/products-anik/code1-phone-charm.png" alt="lotus ribbon phone charm" width="200px" height="200px">
         </article>
 
-        <article>
+        <article class="card">
             <h3>Lotus Phone Charm</h3>
             <p>Php 25</p>
             <p>The phone charm showcases a pieced lotus flower created with round and flower beads. This is perfect 
@@ -95,6 +90,7 @@
             </p>
             <img src="anikpictures/products-anik/code2-phone-charm.png" alt="lotus phone charm" width="200px" height="200px">
         </article>
+    </div>
     </main>
 
         <!--footer part-->
