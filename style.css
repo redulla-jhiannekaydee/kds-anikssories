@@ -147,13 +147,14 @@ main article p i {
 
 /* grid layout for product cards */
 .product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 1.3rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
 }
 
 /* product card part */
 .product-card {
+    flex: 1 1 240px; /* added */
     background: var(--backgroundProduct);
     border-left: 10px solid var(--brand);
     border-radius: 15px;
