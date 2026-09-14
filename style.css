@@ -10,8 +10,8 @@
     --textColor1: #3D1F30;
     --textColor2: #E6E2C6; 
     --textColor3: #675961;
+    --textColor4: #2E2640;
     --shadeOfColor: #8967B3;
-    --shadeOfColor2: #6A5495; 
     --backgroundProduct: #FFF1AC;
     --borderProduct: #D4C25C;
     --borderForm: #905E96;
@@ -35,59 +35,55 @@ body {
 }
 
 /* layoutting - from header to footer parts 
-1. adjusting the header */
-header {
+1. adjusting the header !using flexbox */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background: var(--brand);
     color: var(--textColor1);
-    padding: 2rem 1rem;
-    text-align: center;
+    padding: 1.5rem 2rem;
+    min-height: 120px;
 }
 
-header h1 {
+.shop-name h1 {
     margin: 0 0 0.25rem;
     font-family: "Geist Pixel", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 400;
+    font-weight: 600;
     font-style: normal;
     letter-spacing: 0.6px;
 }
 
-header p {
-    margin: 0;
-    font-style: italic;
-    font-size: 15px;
-    opacity: 0.9;
-}
-
 /* 2. adjusting the navigation bar */
-nav {
-    background: var(--shadeOfColor);
+.site-header nav {
+    background: var(--brand);
     font-family: "Geist", sans-serif;
-    font-weight: 200;
+    font-weight: 500;
 }
 
-nav ul {
+.site-header nav ul {
     list-style: none;
-    padding: 0;
-    margin: 0;
     display: flex;
-    justify-content: center;
+    gap: 20px;
 }
 
-nav li {
-    display: inline-block;
-}
-
-nav a {
-    display: block;
-    padding: 0.9rem 1.4rem;
-    color: var(--textColor2);
+.site-header nav a {
+    padding: 0.5rem 0.8rem;
+    color: var(--textColor4);
     text-decoration: none;
-    font-size: 13px;
+    font-size: 18px;
+    display: inline-block;
+    background-image: linear-gradient(var(--shadeOfColor), var(--shadeOfColor));
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: 100% 0%;
+    transition: background-size 0.3s ease, transform 0.3s ease;
 }
 
-nav a:hover {
-    background: var(--shadeOfColor2);
+.site-header nav a:hover {
+    background-size: 100% 4px;
+    transform: translateY(-5px);
 }
 
 /* 3. designing the main/body part */
@@ -131,6 +127,24 @@ main article p i {
     color: var(--textColor3);
 }
 
+/* !added for the hero banner */
+.hero-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+    background: var(--backgroundProduct);
+    border-radius: 15px;
+    border: 2px solid var(--borderProduct);
+    margin-bottom: 2rem;
+}
+
+.hero-banner h2 {
+    margin: 0;
+    color: var(--ink);
+    text-align: center;
+}
+
 /* grid layout for product cards */
 .product-grid {
     display: grid;
@@ -167,8 +181,8 @@ main article p i {
 
 .button {
     display: inline-block;
-    background: var(--brand);
-    color: var(--textColor1);
+    background: var(--shadeOfColor);
+    color: var(--textColor2);
     padding: 0.6rem 1.2rem;
     margin-top: 5px;
     border-radius: 10px;
