@@ -23,6 +23,11 @@
     box-sizing: border-box;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 body {
     margin: 0;
     font-family: "Geist Mono", monospace;
@@ -32,6 +37,62 @@ body {
     line-height: 1.5;
     color: var(--ink);
     background: var(--paper);
+}
+
+/* page skeleton - mobile-first CSS grid */
+.page {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    grid-template-areas: 
+        "masthead masthead"
+        "side     main"
+        "foot     foot";
+    gap: 16px;
+}
+
+header {
+    grid-area: masthead;
+}
+
+aside {
+    grid-area: side;
+}
+
+main {
+    grid-area: main;
+}
+
+footer {
+    grid-area: foot;
+}
+
+aside {
+    background: var(--backgroundProduct);
+    border: 2px solid var(--borderProduct);
+    border-radius: 15px;
+    padding: 1.2rem 1.5rem;
+    align-self: start;
+}
+
+aside h2 {
+    color: var(--ink);
+    font-size: 16px;
+    margin: 0 0 0.5rem;
+}
+
+aside ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.2rem;
+}
+
+aside ul:last-child {
+    margin-bottom: 0;
+}
+
+aside li {
+    color: var(--textColor3);
+    padding: 0.25rem 0;
 }
 
 /* layoutting - from header to footer parts 
