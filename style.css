@@ -275,6 +275,9 @@ main article p i {
 /* utilities */
 .text-center {
     text-align: center;
+    color: var(--muted);
+    font-size: 1rem;
+    margin-bottom: 2.5rem;
 }
 
 /* forms part */
